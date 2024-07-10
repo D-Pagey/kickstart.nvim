@@ -116,8 +116,15 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+vim.keymap.set('n', '<C-f>', '<C-f>zz', { desc = 'Page down' })
+vim.keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'Page up' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page down' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Half page up' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
