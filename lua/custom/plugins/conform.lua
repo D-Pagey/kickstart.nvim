@@ -24,13 +24,13 @@ return { -- Autoformat
       }
     end,
     formatters_by_ft = {
-      lua = { 'stylua' },
+      lua = { 'stylua', stop_after_first = true },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      rust = { 'rustfmt', lsp_format = 'fallback' },
+      rust = { 'rustfmt', lsp_format = 'fallback', stop_after_first = true },
       javascript = { { 'prettierd', 'prettier', stop_after_first = true } },
       javascriptreact = { { 'prettierd', 'prettier', stop_after_first = true } },
       typescript = { { 'prettierd', 'prettier', stop_after_first = true } },
