@@ -10,14 +10,17 @@ return {
       view_options = {
         show_hidden = true,
         natural_order = true,
-        -- is_always_hidden = function(name, _)
-        --   return name == ".." or name == ".git"
-        -- end,
+        is_always_hidden = function(name, _)
+          return name == '..' or name == '.git'
+        end,
       },
-      keymaps = {
-        ['<C-c>'] = false,
-        ['q'] = 'actions.close',
+      win_options = {
+        wrap = true,
       },
+      -- keymaps = {
+      --   ['<C-c>'] = false,
+      --   ['q'] = 'actions.close',
+      -- },
     }
   end,
 }
