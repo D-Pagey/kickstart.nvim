@@ -147,6 +147,11 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+-- Deleting to black hole register
+vim.keymap.set('n', 'd', '"_d', { noremap = true })
+vim.keymap.set('n', 'c', '"_c', { noremap = true })
+vim.keymap.set('n', 'd', '"_d', { noremap = true })
+
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
